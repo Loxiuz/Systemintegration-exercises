@@ -12,8 +12,8 @@ import java.util.List;
 @Service
 public class TxtService {
 
-    private final char rowChar = '~';
-    private final char columnChar = '|';
+    private final String rowChar = "~";
+    private final String columnChar = "|";
     private final String lastChars = "#EOF#";
 
     public List<CompanyTxt> parseToJson(String filePath) throws FileNotFoundException {
@@ -31,7 +31,7 @@ public class TxtService {
 
         companiesFromFile = companiesFromFile.replace(lastChars, "");
 
-        String[] rows = companiesFromFile.split(String.valueOf(rowChar));
+        String[] rows = companiesFromFile.split(rowChar);
 
         return Arrays.stream(rows)
                 .map(row -> row.split("\\" + columnChar))
