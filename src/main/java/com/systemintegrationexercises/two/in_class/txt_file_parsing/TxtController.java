@@ -1,4 +1,4 @@
-package two.in_class.txt_file_parsing;
+package com.systemintegrationexercises.two.in_class.txt_file_parsing;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +17,8 @@ public class TxtController {
     }
 
     @GetMapping("/parseToJson")
-    public ResponseEntity<List<Company>> parseTxtFile(@RequestParam String filePath) throws FileNotFoundException {
-        List<Company> companies = txtService.parseTxtFile(filePath);
+    public ResponseEntity<List<CompanyTxt>> parseToJson(@RequestParam String filePath) throws FileNotFoundException {
+        List<CompanyTxt> companies = txtService.parseToJson(filePath);
         if(companies.isEmpty()) {
             return ResponseEntity.noContent().build();
         }

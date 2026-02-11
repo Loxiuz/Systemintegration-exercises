@@ -1,4 +1,4 @@
-package two.in_class.txt_file_parsing;
+package com.systemintegrationexercises.two.in_class.txt_file_parsing;
 
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.stereotype.Service;
@@ -13,10 +13,10 @@ import java.util.List;
 public class TxtService {
 
     private final char rowChar = '~';
-    private final String lastChars = "#EOF#";
     private final char columnChar = '|';
+    private final String lastChars = "#EOF#";
 
-    public List<Company> parseTxtFile(String filePath) throws FileNotFoundException {
+    public List<CompanyTxt> parseToJson(String filePath) throws FileNotFoundException {
         String companiesFromFile;
         try{
             FileInputStream inputStream = new FileInputStream(filePath);
@@ -35,7 +35,7 @@ public class TxtService {
 
         return Arrays.stream(rows)
                 .map(row -> row.split("\\" + columnChar))
-                .map(columns -> new Company(
+                .map(columns -> new CompanyTxt(
                         columns[0],
                         columns[1],
                         columns[2],
