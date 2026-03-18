@@ -1,4 +1,4 @@
-package com.systemintegrationexercises.two.in_class.txt_file_parsing;
+package com.systemintegrationexercises._2.in_class.txt_file_parsing;
 
 public class CompanyTxt {
     String companyName;

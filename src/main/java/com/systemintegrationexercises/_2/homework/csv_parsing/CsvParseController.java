@@ -1,4 +1,4 @@
-package com.systemintegrationexercises.two.homework.csv_parsing;
+package com.systemintegrationexercises._2.homework.csv_parsing;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

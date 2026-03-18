@@ -1,4 +1,4 @@
-package com.systemintegrationexercises.two.homework.yaml_parsing;
+package com.systemintegrationexercises._2.homework.yaml_parsing;
 
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.stereotype.Service;
