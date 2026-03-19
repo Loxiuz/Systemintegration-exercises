@@ -12,12 +12,14 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class XmlParserService {
+
+    private XmlParserService() {
+    }
 
     private static final Logger log = LoggerFactory.getLogger(XmlParserService.class);
 
@@ -51,6 +53,7 @@ public class XmlParserService {
                     case "postal_code" -> company.setPostal_code(companyFields.item(j).getTextContent());
                     case "city" -> company.setCity(companyFields.item(j).getTextContent());
                     case "email" -> company.setEmail(companyFields.item(j).getTextContent());
+                    default -> log.warn("Unknown field: " + companyFields.item(j).getNodeName());
                 }
             }
             companies.add(company);
