@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<companies>
+    <company>
+        <cvr>78836568</cvr>
+        <name>Dansk Consult ApS &amp; Co.</name>
+        <street>Parkvej</street>
+        <number>123</number>
+        <postal_code>6700</postal_code>
+        <city>Esbjerg</city>
+        <email>info0@dansk.dk</email>
+    </company>
+    <company>
+        <cvr>67982862</cvr>
+        <name>Viking IT IVS</name>
+        <street>Torvegade</street>
+        <number>132</number>
+        <postal_code>3400</postal_code>
+        <city>Hillerød</city>
+        <email>info1@viking.dk</email>
+    </company>
+</companies>

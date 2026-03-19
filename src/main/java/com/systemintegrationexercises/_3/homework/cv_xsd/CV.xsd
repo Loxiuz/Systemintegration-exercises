@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:complexType name="PersonInfoType">
+        <xs:sequence>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="dateOfBirth" type="xs:date"/>
+            <xs:element name="placeOfBirth" type="xs:string"/>
+            <xs:element name="nationality" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="cpr" type="xs:string"/>
+            <xs:element name="imgFileName" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ContactInfoType">
+        <xs:sequence>
+            <xs:element name="street" type="xs:string"/>
+            <xs:element name="streetNumber" type="xs:string"/>
+            <xs:element name="postalCode" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="phoneNumber" type="xs:string"/>
+            <xs:element name="furtherInformation" type="xs:string" minOccurs="0"/>
+            <xs:element name="linkedInAccLink" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AcademicDegreeType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="institution" type="xs:string"/>
+            <xs:element name="yearOfGraduation" type="xs:gYear"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AcademicDegreesType">
+        <xs:sequence>
+            <xs:element name="degree" type="AcademicDegreeType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LanguageType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="isMotherLanguage" type="xs:boolean"/>
+            <xs:element name="level" type="LanguageLevelType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="LanguageLevelType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="high"/>
+            <xs:enumeration value="intermediate"/>
+            <xs:enumeration value="low"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="LanguagesType">
+        <xs:sequence>
+            <xs:element name="language" type="LanguageType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="WorkType">
+        <xs:sequence>
+            <xs:element name="company" type="xs:string"/>
+            <xs:element name="jobTitle" type="xs:string"/>
+            <xs:element name="startDate" type="xs:date"/>
+            <xs:element name="endDate" type="xs:date" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="WorkHistoryType">
+        <xs:sequence>
+            <xs:element name="work" type="WorkType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="cv">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personInfo" type="PersonInfoType"/>
+                <xs:element name="contactInfo" type="ContactInfoType"/>
+                <xs:element name="academicBackground" type="AcademicDegreesType"/>
+                <xs:element name="languages" type="LanguagesType"/>
+                <xs:element name="workHistory" type="WorkHistoryType"/>
+                <xs:element name="hobbies" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

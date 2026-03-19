@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cv>
+    <personInfo>
+        <firstName>Anna</firstName>
+        <lastName>Jensen</lastName>
+        <dateOfBirth>1998-04-12</dateOfBirth>
+        <placeOfBirth>Aarhus</placeOfBirth>
+        <nationality>Danish</nationality>
+        <nationality>Swedish</nationality>
+        <cpr>120498-1234</cpr>
+        <imgFileName>anna-jensen.jpg</imgFileName>
+    </personInfo>
+
+    <contactInfo>
+        <street>Example Street</street>
+        <streetNumber>42B</streetNumber>
+        <postalCode>8000</postalCode>
+        <email>anna.jensen@example.com</email>
+        <phoneNumber>+45 12 34 56 78</phoneNumber>
+        <furtherInformation>2nd floor, left</furtherInformation>
+        <linkedInAccLink>https://www.linkedin.com/in/annajensen</linkedInAccLink>
+    </contactInfo>
+
+    <academicBackground>
+        <degree>
+            <name>BSc Computer Science</name>
+            <institution>Aarhus University</institution>
+            <yearOfGraduation>2020</yearOfGraduation>
+        </degree>
+        <degree>
+            <name>MSc Software Engineering</name>
+            <institution>Technical University of Denmark</institution>
+            <yearOfGraduation>2022</yearOfGraduation>
+        </degree>
+    </academicBackground>
+
+    <languages>
+        <language>
+            <name>Danish</name>
+            <isMotherLanguage>true</isMotherLanguage>
+        </language>
+        <language>
+            <name>English</name>
+            <isMotherLanguage>false</isMotherLanguage>
+            <level>high</level>
+        </language>
+        <language>
+            <name>German</name>
+            <isMotherLanguage>false</isMotherLanguage>
+            <level>intermediate</level>
+        </language>
+    </languages>
+
+    <workHistory>
+        <work>
+            <company>Example Consulting ApS</company>
+            <jobTitle>Junior Developer</jobTitle>
+            <startDate>2020-09-01</startDate>
+            <endDate>2022-06-30</endDate>
+        </work>
+        <work>
+            <company>Nordic Software A/S</company>
+            <jobTitle>Software Engineer</jobTitle>
+            <startDate>2022-08-01</startDate>
+            <!-- endDate omitted: current position -->
+        </work>
+    </workHistory>
+
+    <hobbies>Running, photography, board games</hobbies>
+</cv>
